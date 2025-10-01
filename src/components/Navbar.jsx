@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import logo from "../assets/logo.png"; // Make sure you have logo.png inside src/assets
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (

@@ -1,76 +1,111 @@
-/* Navbar Styles */
+/* Navbar base */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 80px;
-  background-color: #1a252f;
-  color: #fff;
+  padding: 20px 130px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Light/Dark Mode */
+.navbar.light {
+  background-color: #ffffff;
+  color: #26223a;
+}
+
+.navbar.dark {
+  background-color: #222;
+  color: #f1f1f1;
+}
+
+/* Logo section */
 .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
+.logo-img {
+  height: 40px;
+  width: 100px;
+}
+
+/* Nav links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
+  gap: 20px;
 }
 
-.nav-links a {
-  color: #fff;
+.nav-item {
   text-decoration: none;
-  font-size: 1.1rem;
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
+.nav-item:hover {
+  color: #007bff;
 }
 
-.logo{
-  display: flex;
-  align-self: center;
+/* Active link */
+.active {
+  font-weight: bold;
+  border-bottom: 2px solid #007bff;
+  color: #007bff;
 }
 
-.logo img,
-.logo-img {
-  height: 90px;
-  width: auto;
-  object-fit: contain;
+/* Theme toggle button */
+.theme-toggle,
+.theme-light {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.theme-light{
+  color: yellow;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Home Section */
 .home {
-  padding: 120px 100px;
+  padding: 70px 100px;
   text-align: left;
-  background-color: #f4f7f9;
   min-height: 44.55vh;
+  background: linear-gradient(to right, #bdc2c5, #ffffff);
+}
+
+.main-section{
+  min-height: 72vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
 .home-heading {
   font-size: 3rem;
   margin-bottom: 25px;
-  color: #0d1318;
+  color: #26223a;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .home-description {
   font-size: 1.3rem;
   line-height: 1.8;
   color: #312c2c;
-}
-
-/* Footer Styles */
-.footer {
-  background-color: #1a252f;
-  color: #fff;
-  text-align: center;
-  padding: 10px 20px;
-  font-size: 1rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* Student Card */
@@ -78,7 +113,7 @@
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 20px;
-  min-width: 320px;
+  min-width: 350px;
   box-shadow: 10px 4px 10px rgba(10, 9, 9, 0.1);
   background-color: #fff;
   transition: transform 0.2s ease-in-out;
@@ -99,4 +134,24 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+/* Other Pages */
+
+.contact,
+.about,
+.contact{
+  padding: 70px 100px;
+  text-align: left;
+  background-color: #f4f7f9;
+  min-height: 56.55vh;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #1a252f;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 1rem;
 }

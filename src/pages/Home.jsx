@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import StudentCard from "./StudentCard";
+import StudentCard from "../components/StudentCard";
 const STUDENT_DATA = [
   { rollNo: 'L1F24PACS0009', name: 'Muhammad Ahmad', course: 'Information Tecchnology', department: 'Computer Science' },
   { rollNo: 'L1F24PACS0010', name: 'Muhammad Ali', course: 'Enterpenureship', department: 'Computer Science' },

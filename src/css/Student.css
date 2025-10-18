@@ -1,41 +1,76 @@
-.students-page{
-  width: 90%;
-  margin: 20px auto;
+.students-page {
+  padding: 30px;
   text-align: center;
-  min-height: 69vh;
+}
+
+.add-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.add-btn:hover {
+  background: #0056b3;
 }
 
 .students-table {
-  width: 80%;
-  margin: 20px auto;
+  width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
 }
 
 .students-table th,
 .students-table td {
   border: 1px solid #ddd;
-  padding: 12px;
+  padding: 10px;
   text-align: center;
 }
 
 .students-table th {
-  background-color: #1976d2;
+  background-color: #007bff;
   color: white;
+}
+
+.table-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .students-table button {
-  margin: 0 5px;
-  padding: 5px 10px;
-  cursor: pointer;
+  margin: 3px;
+  padding: 6px 10px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-.students-table .delete-btn {
-  background-color: #e53935;
+.students-table button:nth-child(1) {
+  background: #28a745;
   color: white;
 }
 
-.students-table button:hover {
-  opacity: 0.8;
+.students-table button:nth-child(2) {
+  background: #ffc107;
+  color: black;
+}
+
+.students-table button:nth-child(3) {
+  background: #dc3545;
+  color: white;
+}
+
+.top-student-row {
+  background-color: #e6ffe6;
+  font-weight: bold;
+}
+
+.no-data {
+  margin-top: 30px;
+  color: #777;
+  font-size: 18px;
 }

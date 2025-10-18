@@ -2,11 +2,17 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../App.css";
 import logo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const navigate = useNavigate();
 
   const toggleTheme = () => setDarkMode(!darkMode);
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    navigate("/login");
+  };
 
   return (
     <nav className={`navbar ${darkMode ? "dark" : "light"}`}>
@@ -17,7 +23,7 @@ const Navbar = () => {
       <ul className="nav-links">
         <li>
           <NavLink
-            to="/"
+            to="/home"
             end
             className={({ isActive }) =>
               isActive ? "nav-item active" : "nav-item"
@@ -57,9 +63,11 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-
       <button className={darkMode?"theme-light":"theme-toggle"} onClick={toggleTheme}>
         {darkMode ? "☀️ Light" : "🌙 Dark"}
+      </button>
+      <button className="logout-btn" onClick={handleLogout}>
+        Logout
       </button>
     </nav>
   );

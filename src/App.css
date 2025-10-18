@@ -58,6 +58,7 @@
 }
 
 /* Theme toggle button */
+.logout-btn,
 .theme-toggle,
 .theme-light {
   border: none;
@@ -73,6 +74,7 @@
   color: yellow;
 }
 
+.logout-btn,
 .theme-toggle:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }

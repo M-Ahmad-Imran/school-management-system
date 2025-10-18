@@ -1,0 +1,110 @@
+.cgpa-page {
+  max-width: 850px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.cgpa-page h1 {
+  color: #1976d2;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.cgpa-page p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.subject-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.subject-row input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 200px;
+  transition: 0.3s;
+}
+
+.subject-row input:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+.remove-btn {
+  background: #ef5350;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.remove-btn:hover {
+  background: #c62828;
+}
+
+.actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.add-btn {
+  background-color: #43a047;
+  color: #fff;
+}
+
+.add-btn:hover {
+  background-color: #2e7d32;
+}
+
+.calc-btn {
+  background-color: #1976d2;
+  color: #fff;
+}
+
+.calc-btn:hover {
+  background-color: #0d47a1;
+}
+
+.result {
+  margin-top: 30px;
+  font-size: 22px;
+  color: #1976d2;
+}
+
+.result span {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

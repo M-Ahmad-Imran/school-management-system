@@ -1,47 +1,137 @@
-.student-details {
-  max-width: 500px;
-  margin: 60px auto;
-  padding: 30px 40px;
-  background-color: #ffffff;
+/* StudentsDetail.css */
+
+.student-details-page {
+  /* Use Flexbox to center the content vertically and horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+  background-color: #f4f7f6; /* Light background for the whole page */
+  font-family: Arial, sans-serif;
+}
+
+.details-card {
+  /* Main container for the student details */
+  background: #ffffff;
+  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  transition: all 0.3s ease;
-  min-height: 55vh;
-}
-
-.student-details h2 {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%;
+  max-width: 500px; /* Max width for readability on larger screens */
   text-align: center;
-  margin-bottom: 25px;
-  color: #1976d2;
-  font-size: 28px;
 }
 
-.student-details p {
-  font-size: 18px;
-  margin: 12px 0;
+.details-pic {
+  /* Styling for the student's profile picture */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Make it a circle */
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #007bff; /* Accent border */
+}
+
+.details-card h2 {
+  /* Student Name */
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.8em;
+}
+
+.details-card p {
+  /* Roll No, Department paragraphs */
+  color: #555;
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+.details-card strong {
+  /* Bold labels */
   color: #333;
 }
 
-.student-details strong {
-  color: #0d47a1;
-  width: 120px;
+.details-card h3 {
+  /* Subjects & Grades heading */
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #007bff;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.grade-table {
+  /* Table styling */
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.grade-table th,
+.grade-table td {
+  /* Table cells */
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.grade-table th {
+  /* Table headers */
+  background-color: #f8f9fa;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.grade-table tr:nth-child(even) {
+  /* Zebra striping for table rows */
+  background-color: #fefefe;
+}
+
+.cgpa {
+  /* CGPA display */
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #28a745; /* Success/Green color for CGPA */
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px dashed #28a74555;
   display: inline-block;
+  border-radius: 5px;
 }
 
-.student-details button {
-  display: block;
-  margin: 30px auto 0;
-  background-color: #1976d2;
-  color: #fff;
+.back-btn {
+  /* Back button styling */
+  background-color: #6c757d; /* Muted color for navigation */
+  color: white;
   border: none;
-  padding: 10px 25px;
-  border-radius: 8px;
-  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
-.student-details button:hover {
-  background-color: #0d47a1;
+.back-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .details-card {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .details-card h2 {
+    font-size: 1.5em;
+  }
+
+  .grade-table th,
+  .grade-table td {
+    padding: 10px 8px;
+    font-size: 0.9em;
+  }
 }
